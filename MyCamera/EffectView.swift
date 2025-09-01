@@ -77,7 +77,7 @@ struct EffectView: View {
             }
             .padding()
             
-            if let showImage {
+            if let showImage = showImage?.resized() {
                 // captureImageから共有する画像を生成する
                 let shareImage = Image(uiImage: showImage)
                 
